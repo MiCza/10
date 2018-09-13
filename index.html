@@ -12,33 +12,7 @@
 </head>
 
 <body>
-    <div class="main-carousel">
-        <div class="carousel-cell" id="carousel-cell1" style="background-image:url('https://images.pexels.com/photos/14621/Warsaw-at-night-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="container">
-                <h2>WARSAW</h2>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell2" style="background-image:url('https://images.pexels.com/photos/208699/pexels-photo-208699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="container">
-                <h2>BERLIN</h2>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell3" style="background-image:url('https://images.pexels.com/photos/713768/pexels-photo-713768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="container">
-                <h2>PRAGUE</h2>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4" style="background-image:url('https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="container">
-                <h2>PARIS</h2>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5" style="background-image:url('https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
-            <div class="container">
-                <h2>AMSTERDAM</h2>
-            </div>
-        </div>
-    </div>
+    <div class="main-carousel"></div>
     <button class="restart">RESTART</button>
     <div class="progress-bar"></div>
     <div class="container-buttons">
@@ -48,8 +22,52 @@
         <button><a href="#carousel-cell4">View cell 4</a></button>
         <button><a href="#carousel-cell5">View cell 5</a></button>
     </div>
+    
+    <script id="slideScript" type="x-tmpl-mustache">
+        <div class="carousel-cell" id="{{id}}" style="background-image:url({{image}});">
+            <div class="container">
+                <h2>{{title}}</h2>
+                {{{description}}}
+            </div>
+        </div>
+    </script>
+    <script>
+        var dataSlides = [{
+                id: 'carousel-cell1',
+                image: 'https://images.pexels.com/photos/14621/Warsaw-at-night-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'WARSAW',
+                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
+            },
+            {
+                id: 'carousel-cell2',
+                image: 'https://images.pexels.com/photos/208699/pexels-photo-208699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'BERLIN',
+                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
+            },
+            {
+                id: 'carousel-cell3',
+                image: 'https://images.pexels.com/photos/713768/pexels-photo-713768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'PRAGUE',
+                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
+            },
+            {
+                id: 'carousel-cell4',
+                image: 'https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'PARIS',
+                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
+            },
+            {
+                id: 'carousel-cell5',
+                image: 'https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'AMSTERDAM',
+                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
+            }
+        ];
+    </script>
+    
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/Mustache.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
