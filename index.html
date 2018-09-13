@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Flickity</title>
+</head>
+
+<body>
+    <div class="main-carousel">
+        <div class="carousel-cell" id="carousel-cell1" style="background-image:url('https://images.pexels.com/photos/14621/Warsaw-at-night-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            <div class="container">
+                <h2>WARSAW</h2>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell2" style="background-image:url('https://images.pexels.com/photos/208699/pexels-photo-208699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            <div class="container">
+                <h2>BERLIN</h2>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell3" style="background-image:url('https://images.pexels.com/photos/713768/pexels-photo-713768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            <div class="container">
+                <h2>PRAGUE</h2>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell4" style="background-image:url('https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            <div class="container">
+                <h2>PARIS</h2>
+            </div>
+        </div>
+        <div class="carousel-cell" id="carousel-cell5" style="background-image:url('https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+            <div class="container">
+                <h2>AMSTERDAM</h2>
+            </div>
+        </div>
+    </div>
+    <button class="restart">RESTART</button>
+    <div class="progress-bar"></div>
+    <div class="container-buttons">
+        <button><a href="#carousel-cell1">View cell 1</a></button>
+        <button><a href="#carousel-cell2">View cell 2</a></button>
+        <button><a href="#carousel-cell3">View cell 3</a></button>
+        <button><a href="#carousel-cell4">View cell 4</a></button>
+        <button><a href="#carousel-cell5">View cell 5</a></button>
+    </div>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
