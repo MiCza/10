@@ -12,63 +12,60 @@
 </head>
 
 <body>
-    <div class="main-carousel"></div>
-    <button class="restart">RESTART</button>
-    <div class="progress-bar"></div>
-<!--    <div class="container-buttons">
-        <button><a href="#carousel-cell1">View cell 1</a></button>
-        <button><a href="#carousel-cell2">View cell 2</a></button>
-        <button><a href="#carousel-cell3">View cell 3</a></button>
-        <button><a href="#carousel-cell4">View cell 4</a></button>
-        <button><a href="#carousel-cell5">View cell 5</a></button>
-    </div> 
--->
-    <div id="page-wrapper" class="container">
-      <h3>My Google Maps Demo</h3>
-      <p id="infos"></p>
-        <div id="map"></div>
-    </div>    
-    <script id="slideScript" type="x-tmpl-mustache">
-        <div class="carousel-cell" id="{{id}}" style="background-image:url({{image}});">
-            <div class="container">
-                <h2>{{title}}</h2>
-                {{{description}}}
-            </div>
-        </div>
-    </script>
-    <script>
-        var dataSlides = [{
-                id: 'carousel-cell1',
-                image: 'https://images.pexels.com/photos/14621/Warsaw-at-night-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                title: 'WARSAW',
-                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
-            },
-            {
-                id: 'carousel-cell2',
-                image: 'https://images.pexels.com/photos/208699/pexels-photo-208699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                title: 'BERLIN',
-                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
-            },
-            {
-                id: 'carousel-cell3',
-                image: 'https://images.pexels.com/photos/713768/pexels-photo-713768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                title: 'PRAGUE',
-                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
-            },
-            {
-                id: 'carousel-cell4',
-                image: 'https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                title: 'PARIS',
-                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
-            },
-            {
-                id: 'carousel-cell5',
-                image: 'https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                title: 'AMSTERDAM',
-                description: '<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut mattis purus. Etiam ac auctor elit.</h6>'
-            }
-        ];
-    </script>
+    <div class="main-carousel" id="results">
+		
+	</div>
+
+	<div class="progress-bar"></div>
+	<button class="button"><a href="#carousel-cell1">Restart</a></button>
+	<div id="map"></div>
+
+
+	<script id="template-product-item" type="x-tmpl-mustache">
+		<div class="carousel-cell" id="{{number}}" style="background-image: url({{ image }}) "><div class="container"><h2>{{ title }}</h2></div>
+		</div>
+		
+	</script>
+
+<script>
+    var carouselData = [
+			{
+				image: 'https://images.pexels.com/photos/14621/Warsaw-at-night-free-license-CC0.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
+				title: 'WARSAW',
+				number: 'carousel-cell1',
+				description: '<p>Lorem ipsum.</p> <img src="img/delpicolo.jpg">',
+				coords: {lat: 52.229, lng: 21.011}
+			},
+			{
+				image: 'https://images.pexels.com/photos/208699/pexels-photo-208699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
+				title: 'BERLIN',
+				number: 'carousel-cell2',
+				description: '<p>Lorem ipsum 2.</p> <img src="img/dumlao.jpg">',
+				coords: {lat: 52.518, lng: 13.404}
+			},
+			{
+				image: 'https://images.pexels.com/photos/713768/pexels-photo-713768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
+				title: 'PRAGUE',
+				number: 'carousel-cell3',
+				description: '<p>Lorem ipsum.</p> <img src="img/Limraco.jpg">',
+				coords: {lat: 50.075, lng: 14.435}
+			},
+			{
+				image: 'https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
+				title: 'PARIS',
+				number: 'carousel-cell4',
+				description: '<p>Lorem ipsum.</p> <img src="img/munro.jpg">',
+				coords: {lat: 48.856, lng: 2.351}
+			},
+			{
+				image: 'https://images.pexels.com/photos/967292/pexels-photo-967292.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
+				title: 'AMSTERDAM',
+				number: 'carousel-cell5',
+				description: '<p>Lorem ipsum.</p> <img src="img/delpicolo.jpg">',
+				coords: {lat: 52.369, lng: 4.895}
+			}
+		];
+	</script>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
